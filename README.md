@@ -91,13 +91,15 @@ Before you begin, ensure you have the following installed:
 - Node.js 18.x or higher
 - npm, yarn, or pnpm package manager
 - PostgreSQL database
-- Google Client ID and Secret (for authentication)
 - Optional provider keys depending on the features you want to use:
+  - Google Client ID & Secret (for OAuth authentication)
   - OpenAI API key (for cloud text generation)
   - Together AI API key (for image generation)
   - FAL API key (for additional image generation flows)
-  - Tavily API key (for web search)
+  - Pinecone API key (for vector search)
+  - Tavily API key or Google Custom Search API Key & Search Engine CX (for web search)
   - Unsplash access key (for stock images)
+  - UploadThing token (for file upload service)
 
 ### Installation
 
@@ -120,27 +122,30 @@ Before you begin, ensure you have the following installed:
 
    ```env
    # Database
-   DATABASE_URL="postgresql://username:password@localhost:5432/presentation_ai"
+   DATABASE_URL="postgresql://postgres:postgres@localhost:5432/presentation_ai"
 
    # Authentication
-   NEXTAUTH_SECRET=""
+   NEXTAUTH_SECRET="development_secret_key_123456789_presentation_ai"
    NEXTAUTH_URL="http://localhost:3000"
 
-   # Google OAuth Provider
+   # Google OAuth Provider (Optional for local dev)
    GOOGLE_CLIENT_ID=""
    GOOGLE_CLIENT_SECRET=""
 
-   # AI Providers
+   # AI & Model Providers
    OPENAI_API_KEY=""
    TOGETHER_AI_API_KEY=""
    FAL_API_KEY=""
+   PINECONE_API_KEY=""
 
    # File Upload Service
    UPLOADTHING_TOKEN=""
 
-   # Optional search and media providers
+   # Search & Media Providers
    UNSPLASH_ACCESS_KEY=""
    TAVILY_API_KEY=""
+   GOOGLE_CUSTOM_SEARCH_API_KEY=""
+   SEARCH_ENGINE_CX=""
    ```
 
    > 💡 **Tip**: Copy `.env.example` to `.env` and fill in your actual values. If you plan to use local text models through Ollama or LM Studio, you can run text generation without an `OPENAI_API_KEY`.
@@ -166,14 +171,17 @@ Before you begin, ensure you have the following installed:
 ### Available Scripts
 
 ```bash
-pnpm dev       # Start the Next.js dev server
-pnpm build     # Build the application
-pnpm start     # Start the production server
-pnpm db:push   # Push the Prisma schema to the database
-pnpm db:studio # Open Prisma Studio
-pnpm type      # Run TypeScript type-checking
-pnpm check     # Run Biome checks
-pnpm lint      # Run Biome linting
+pnpm dev         # Start the Next.js dev server (--turbo)
+pnpm build       # Build the application for production
+pnpm start       # Start the production server
+pnpm db:push     # Generate Prisma client and push schema to database
+pnpm db:studio   # Open Prisma Studio web interface
+pnpm db:generate # Generate Prisma client
+pnpm type        # Run TypeScript type-checking
+pnpm check       # Run Biome code check
+pnpm check:fix   # Run Biome check and automatically fix issues
+pnpm lint        # Run Biome linting
+pnpm lint:fix    # Run Biome linting and automatically fix issues
 ```
 
 ## 💻 Usage
