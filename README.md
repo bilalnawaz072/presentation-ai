@@ -1,18 +1,20 @@
-# ALLWEONE® AI Presentation Generator
+# Presentation AI
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/presentationai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Plate JS](https://img.shields.io/badge/Plate.js-3B82F6?logoColor=white)](https://platejs.org)
 
-⭐ **Help us reach more developers and grow the ALLWEONE community. Star this repo!**
+⭐ **Help us reach more developers and grow the Presentation AI community. Star this repo!**
 
-An open-source, AI-powered presentation generator alternative to Gamma.app that creates beautiful, customizable slides in minutes. This tool is part of the broader ALLWEONE AI platform.
+An open-source, AI-powered presentation generator alternative to Gamma.app that creates beautiful, customizable slides in minutes.
 
 <https://github.com/user-attachments/assets/a21dbd49-75b8-4822-bcec-a75b581d9c60>
 
 ## 🔗 Quick Links
 
+- [One-Click Deploy on Railway](https://railway.com/deploy/presentationai)
 - [Live Demo](http://presentation.allweone.com)
 - [Video Tutorial](https://www.youtube.com/watch?v=UUePLJeFqVQ)
 - [Discord Community](https://discord.gg/fsMHMhAHRV)
