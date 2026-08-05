@@ -92,14 +92,11 @@ Before you begin, ensure you have the following installed:
 - npm, yarn, or pnpm package manager
 - PostgreSQL database
 - Optional provider keys depending on the features you want to use:
-  - Google Client ID & Secret (for OAuth authentication)
   - OpenAI API key (for cloud text generation)
   - Together AI API key (for image generation)
-  - FAL API key (for additional image generation flows)
-  - Pinecone API key (for vector search)
-  - Tavily API key or Google Custom Search API Key & Search Engine CX (for web search)
-  - Unsplash access key (for stock images)
   - UploadThing token (for file upload service)
+  - Unsplash access key (for stock images)
+  - Tavily API key (for web search)
 
 ### Installation
 
@@ -128,24 +125,12 @@ Before you begin, ensure you have the following installed:
    NEXTAUTH_SECRET="development_secret_key_123456789_presentation_ai"
    NEXTAUTH_URL="http://localhost:3000"
 
-   # Google OAuth Provider (Optional for local dev)
-   GOOGLE_CLIENT_ID=""
-   GOOGLE_CLIENT_SECRET=""
-
-   # AI & Model Providers
+   # AI & Storage Services
    OPENAI_API_KEY=""
    TOGETHER_AI_API_KEY=""
-   FAL_API_KEY=""
-   PINECONE_API_KEY=""
-
-   # File Upload Service
    UPLOADTHING_TOKEN=""
-
-   # Search & Media Providers
    UNSPLASH_ACCESS_KEY=""
    TAVILY_API_KEY=""
-   GOOGLE_CUSTOM_SEARCH_API_KEY=""
-   SEARCH_ENGINE_CX=""
    ```
 
    > 💡 **Tip**: Copy `.env.example` to `.env` and fill in your actual values. If you plan to use local text models through Ollama or LM Studio, you can run text generation without an `OPENAI_API_KEY`.
