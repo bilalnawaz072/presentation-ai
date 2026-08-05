@@ -90,7 +90,7 @@ An open-source, AI-powered presentation generator alternative to Gamma.app that 
 
 Before you begin, ensure you have the following installed:
 
-- Node.js 18.x or higher
+- Node.js 20.19.0 or higher
 - npm, yarn, or pnpm package manager
 - PostgreSQL database
 - Optional provider keys depending on the features you want to use:
